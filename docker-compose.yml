@@ -1,0 +1,36 @@
+services: 
+  start:
+    build:
+      context: ./start
+    ports:
+      - "2222:22"
+    networks:
+      - ctf_network
+    volumes:
+      - shared:/shared
+  
+  server:
+    build:
+      context: ./server
+    ports:
+      - "5000:5000"
+    networks:
+      - ctf_network
+    volumes:
+      - shared:/app/shared
+
+  bof:
+    build:
+      context: ./buffer-overflow
+    ports:
+      - "2223:22"
+    networks:
+      - ctf_network
+    volumes:
+      - shared:/shared
+
+networks:
+  ctf_network:
+    driver: bridge
+volumes:
+  shared:
