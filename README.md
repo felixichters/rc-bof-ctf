@@ -1,6 +1,6 @@
 # CTF Challenge: Buffer Overflow & Race Condition
 
-A CTF challenge combining a TOCTOU race condition and a stack buffer overflow, running in Docker. Created by Felix Ichters and Lukas Dzielski.
+A CTF challenge combining a TOCTOU race condition and a stack buffer overflow, running in Docker.
 
 ## Setup
 
